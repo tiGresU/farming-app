@@ -11,8 +11,7 @@ from sklearn.metrics import r2_score, mean_squared_error
 # -----------------------------
 # Load Dataset (ABSOLUTE PATH)
 # -----------------------------
-df = pd.read_csv(
-    r"C:\Users\Heril Shah\Desktop\farm agriculture\pesticides.csv"
+df = pd.read_csv("pesticides.csv"
 )
 
 # -----------------------------
@@ -80,3 +79,4 @@ def predict_pesticide_usage(area_code, year):
         "Year": [year]
     })
     return model.predict(sample)[0]
+
